@@ -1,0 +1,135 @@
+@import "../stars/stars-template.wxss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head-img {
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+  -webkit-filter: blur(20px);
+}
+
+.head-text {
+  position: absolute;
+  top: 50rpx;
+  left: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-title {
+  font-size: 40rpx;
+  color: #fff;
+  margin-bottom: 40rpx;
+  font-weight: bold;
+   letter-spacing: 1px;
+}
+
+.head-cy {
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 70rpx;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  font-size: 18rpx;
+}
+
+.like-data {
+  color: #e1294c;
+  margin-right: 40rpx;
+}
+
+.like-text {
+  color: #705c5c;
+  margin-right: 45rpx;
+}
+
+.small-img {
+  width: 175rpx;
+  height: 240rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 160rpx;
+}
+
+.introduce {
+  margin: 40rpx 0 60rpx 40rpx;
+  font-size: 20rpx;
+}
+
+.introduce-title {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 50rpx;
+}
+
+.introduce-content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18rpx;
+  color:#666666;
+}
+
+.introduce-content-text {
+    width: 60rpx;
+    color: #999999;
+    margin-right: 30rpx;
+}
+.detail-stars{
+  margin-top: 10rpx;
+}
+.hr{
+  width:750rpx;
+  height: 3rpx;
+  background-color:#d9d9d9;
+}
+.summary{
+  margin:54rpx 0 55rpx 38rpx;
+  width:650rpx;
+   display: flex;
+  flex-direction: column;
+}
+.summary-text{
+  margin-bottom: 25rpx;
+  color:#999999;
+}
+.summary-content{
+  line-height: 40rpx;
+  color:#696969;
+  letter-spacing: 1px;
+}
+.actor{
+  margin: 50rpx 0 50rpx 40rpx;
+   display: flex;
+  flex-direction: column;
+}
+.actor-text{
+  margin-bottom: 45rpx;
+  color:#999999;
+}
+.actor-content{
+  width:100%;
+  white-space: nowrap;
+}
+.actor-in{
+  display: inline-flex;
+  flex-direction: column;
+  width:170rpx;
+  text-align: center;
+  white-space: normal;
+  margin-right: 38rpx;
+}
+.actor-img{
+  width:100%;
+  height: 180rpx;
+  margin-bottom: 25rpx;
+}
+.actor-name{
+  color:#666666;
+}

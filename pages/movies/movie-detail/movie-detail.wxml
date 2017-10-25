@@ -1,0 +1,53 @@
+<import src="../stars/stars-template.wxml" />
+<view class="container">
+  <image class="head-img" src="{{movie.movieImg}}" mode="aspectFill" ></image>
+  <view class="head-text" data-src="{{movie.movieImg}}" catchtap="previewImgTap">
+    <text class="head-title">{{movie.title}}</text>
+    <text class="head-cy">{{movie.country + " · " + movie.year}}</text>
+    <view class="like">
+      <text class="like-data">{{movie.wishCount}}</text>
+      <text class="like-text">人喜欢</text>
+      <text class="like-data">{{movie.commentCount}}</text>
+      <text class="like-text">条评论</text>
+    </view>
+  </view>
+  <image class="small-img" src="{{movie.movieImg}}"  data-src="{{movie.movieImg}}" catchtap="previewImgTap"></image>
+  <view class="introduce">
+    <view class="introduce-title">
+      <text>{{movie.originalTitle}}</text>
+    </view>
+    <view class="introduce-content">
+      <text class="introduce-content-text">评分</text>
+      <view class="detail-stars"> <template is="starsTemplate" data="{{stars:movie.stars,score:movie.score}}" /></view>
+    </view>
+    <view class="introduce-content">
+      <text class="introduce-content-text">导演</text>
+      <text>{{movie.director.name}}</text>
+    </view>
+    <view class="introduce-content">
+      <text class="introduce-content-text">影人</text>
+      <text>{{movie.casts}}</text>
+    </view>
+    <view class="introduce-content">
+      <text class="introduce-content-text">类型</text>
+      <text>{{movie.generes}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="summary">
+    <text class="summary-text">剧情简介</text>
+    <text class="summary-content">{{movie.summary}}</text>
+  </view>
+  <view class="hr"></view>
+  <view class="actor">
+    <text class="actor-text">影人</text>
+    <scroll-view scroll-x="true"  scroll-y="false" class="actor-content">
+      <block wx:for="{{movie.castsInfo}}" wx:for-item="item" wx:key="property">
+        <view class="actor-in">
+          <image src="{{item.img}}" class="actor-img"></image>
+          <text class="actor-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
